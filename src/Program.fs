@@ -41,8 +41,8 @@ let home = """<!doctype html>
 
 
 [<EntryPoint>]
-let main argv =
-    let port = UInt16.Parse "8080" //<| Environment.GetEnvironmentVariable("PORT")
+let main args =
+    let port = UInt16.Parse <| (if (args |> Array.length > 0) then args.[0] else Environment.GetEnvironmentVariable("PORT"))
     let website = 
         choose [
             GET >=> path "/" >=> Successful.OK "Home"
