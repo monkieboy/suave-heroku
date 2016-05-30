@@ -5,3 +5,7 @@
 /Users/markgray/dev/suave-heroku/src/suave-heroku/obj/x86/Debug/suave-heroku.exe.mdb
 /Users/markgray/dev/suave-heroku/src/suave-heroku/bin/Debug/FSharp.Core.dll
 /Users/markgray/dev/suave-heroku/src/suave-heroku/bin/Debug/Suave.dll
+/Users/markgray/dev/suave-heroku/src/suave-heroku/bin/suave-heroku.exe.mdb
+/Users/markgray/dev/suave-heroku/src/suave-heroku/bin/suave-heroku.exe
+/Users/markgray/dev/suave-heroku/src/suave-heroku/bin/FSharp.Core.dll
+/Users/markgray/dev/suave-heroku/src/suave-heroku/bin/Suave.dll
