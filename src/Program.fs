@@ -46,6 +46,8 @@ let main argv =
     let website = 
         choose [
             GET >=> path "/" >=> Successful.OK "Home"
+            GET >=> path "/callback" >=> Successful.OK "callback"
+            GET >=> path "/logout" >=> Successful.OK "logout"
             GET >=> path "/test" >=> Successful.OK "test"
             Files.browseHome ] 
     let conf = { defaultConfig with bindings = [ HttpBinding.mk HTTP Net.IPAddress.Any port ] }
