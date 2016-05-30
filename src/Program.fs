@@ -39,6 +39,27 @@ let home = """<!doctype html>
     </body>
 </html>"""
 
+let homePage = 
+    [ yield """<html>"""
+      yield """ <head><title>test</title></head>"""
+      yield """ <body>"""
+      yield """ <h1>Sample Web App</h1>"""
+      yield """  <table class="table table-striped">"""
+      yield """   <thead><tr><th>Page</th><th>Link</th></tr></thead>"""
+      yield """   <tbody>"""
+      yield """      <tr><td>Endangered Animals</td><td><a href="/animals">Link to animals</a></td></tr>""" 
+      yield """      <tr><td>Things</td><td><a href="/things/10">Link to things (10)</a></td></tr>""" 
+      yield """      <tr><td>Things</td><td><a href="/things/100">Link to things (100)</a></td></tr>""" 
+      yield """      <tr><td>API JSON</td><td><a href="/api/json/100">Link to result (100)</a></td></tr>"""
+      yield """      <tr><td>API XML</td><td><a href="/api/xml/100">Link to result (100)</a></td></tr>"""
+      yield """      <tr><td>API JSON</td><td><a href="/api/json/10">Link to result (10)</a></td></tr>"""
+      yield """      <tr><td>API XML</td><td><a href="/api/xml/10">Link to result (10)</a></td></tr>"""
+      yield """      <tr><td>Goodbye</td><td><a href="/goodbye">Link</a></td></tr>"""
+      yield """   </tbody>"""
+      yield """  </table>"""
+      yield """ </body>""" 
+      yield """</html>""" ]
+    |> String.concat "\n"
 
 [<EntryPoint>]
 let main args =
@@ -46,6 +67,7 @@ let main args =
     let website = 
         choose [
             GET >=> path "/" >=> Successful.OK "Home"
+            GET >=> path "/home" >=> Successful.OK homePage
             GET >=> path "/callback" >=> Successful.OK "callback"
             GET >=> path "/logout" >=> Successful.OK "logout"
             GET >=> path "/test" >=> Successful.OK "test"
