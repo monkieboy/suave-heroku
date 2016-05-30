@@ -7,11 +7,12 @@ open Suave.Filters
 
 [<EntryPoint>]
 let main argv =
+    let port = UInt16.Parse <| Environment.GetEnvironmentVariable("PORT")
     let website = 
         choose [
             GET >=> path "/" >=> Successful.OK "root"
             ] 
-    let conf = { defaultConfig with bindings = [ HttpBinding.mk HTTP Net.IPAddress.Any 8083us ] }
+    let conf = { defaultConfig with bindings = [ HttpBinding.mk HTTP Net.IPAddress.Any port ] }
 
     startWebServer conf website
 
