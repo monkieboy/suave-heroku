@@ -45,7 +45,7 @@ let main argv =
     let port = UInt16.Parse <| Environment.GetEnvironmentVariable("PORT")
     let website = 
         choose [
-            GET >=> path "/" >=> Successful.OK home
+            GET >=> path "/" >=> Successful.OK "test"
             ] 
     let conf = { defaultConfig with bindings = [ HttpBinding.mk HTTP Net.IPAddress.Any port ] }
 
