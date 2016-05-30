@@ -42,12 +42,12 @@ let home = """<!doctype html>
 
 [<EntryPoint>]
 let main argv =
-    let port = UInt16.Parse <| Environment.GetEnvironmentVariable("PORT")
+    let port = UInt16.Parse "8080" //<| Environment.GetEnvironmentVariable("PORT")
     let website = 
         choose [
-            GET >=> path "/" >=> Files.browse "index.html"
+            GET >=> path "/" >=> Successful.OK "Home"
             GET >=> path "/test" >=> Successful.OK "test"
-            ] 
+            Files.browseHome ] 
     let conf = { defaultConfig with bindings = [ HttpBinding.mk HTTP Net.IPAddress.Any port ] }
 
     startWebServer conf website
