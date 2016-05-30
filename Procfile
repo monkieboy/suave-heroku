@@ -1,2 +1,2 @@
-web: mono src/bin/suave-heroku.exe
+web: mono src/bin/suave-heroku.exe 
 local: mono src/bin/suave-heroku.exe
