@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "suave-heroku", "src\suave-heroku.fsproj", "{C6B7A8B3-672A-408C-8F76-3840227CE7C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6B7A8B3-672A-408C-8F76-3840227CE7C6}.Debug|x86.ActiveCfg = Debug|x86
+		{C6B7A8B3-672A-408C-8F76-3840227CE7C6}.Debug|x86.Build.0 = Debug|x86
+		{C6B7A8B3-672A-408C-8F76-3840227CE7C6}.Release|x86.ActiveCfg = Release|x86
+		{C6B7A8B3-672A-408C-8F76-3840227CE7C6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
