@@ -3,5 +3,6 @@ NUGET
   remote: https://www.nuget.org/api/v2
   specs:
     FSharp.Core (3.1.2.5)
+    Paket (2.66.6)
     Suave (1.1.2)
       FSharp.Core (>= 3.1.2.5)
